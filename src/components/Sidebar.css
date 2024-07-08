@@ -1,0 +1,124 @@
+/* Sidebar.css */
+
+.sidebar {
+  width: 250px;
+  background-color: white;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  border: 1px solid rgb(225, 225, 225);
+}
+
+.logo{
+  color: #3f3f3f;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.logo img {
+  width: 100%;
+  max-width: 150px; /* Adjust as necessary */
+  display: block;
+  margin: 0 auto;
+}
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.navigation li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+  background-color:#5570F1;
+  color: aliceblue;
+}
+
+.link-text {
+  margin-left: 10px;
+  font: Inter;
+  font-weight: 400;
+  size: 14px;
+  line-height: 16.94px;
+  align-items: center;
+  color: #3f3f3f;
+  margin-right: 2px;
+}
+.icon{
+  color: #3f3f3f;
+}
+
+.collapse-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; /* Hidden by default on larger screens */
+}
+
+.nav-items{
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+.logout{
+  color: #CC5F5F
+}
+.navigation a {
+  padding: 16px, 20px, 16px, 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+
+  .collapse-btn {
+    display: block; /* Show collapse button on smaller screens */
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation li {
+    margin-bottom: 0;
+  }
+
+  .navigation a {
+    padding: 10px, 20px;
+  }
+
+  .link-text {
+    display: none; /* Hide link text on collapsed sidebar */
+  }
+  
+  
+}
