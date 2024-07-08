@@ -1,16 +1,18 @@
 /* Sidebar.css */
 
 .sidebar {
-  width: 250px;
+  width: 230px;
+  height: 1024px;
+  gap: 0px;
+  opacity: 0px;
   background-color: white;
   color: white;
-  padding: 20px;
+  padding: 18px;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   transition: transform 0.3s ease;
-  z-index: 1000;
   border: 1px solid rgb(225, 225, 225);
 }
 
@@ -18,11 +20,12 @@
   color: #3f3f3f;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
+  cursor: pointer;
 }
 .logo img {
   width: 100%;
-  max-width: 150px; /* Adjust as necessary */
+  max-width: 150px; 
   display: block;
   margin: 0 auto;
 }
@@ -45,15 +48,25 @@
   display: flex;
   align-items: center;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
 .navigation a:hover {
   background-color:#5570F1;
-  color: aliceblue;
 }
 
+.below-link-text {
+  margin-left: 10px;
+  font: Inter;
+  font-weight: 400;
+  size: 14px;
+  line-height: 16.94px;
+  align-items: center;
+  color: #050505;
+  margin-right: 2px;
+  padding: 3px 12px;
+} 
 .link-text {
   margin-left: 10px;
   font: Inter;
@@ -63,6 +76,7 @@
   align-items: center;
   color: #3f3f3f;
   margin-right: 2px;
+  padding: 3px 12px;
 }
 .icon{
   color: #3f3f3f;
@@ -79,13 +93,13 @@
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  display: none; /* Hidden by default on larger screens */
+  display: none; 
 }
 
 .nav-items{
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 4rem;
 }
 .logout{
   color: #CC5F5F
@@ -101,7 +115,7 @@
   }
 
   .collapse-btn {
-    display: block; /* Show collapse button on smaller screens */
+    display: block; 
   }
 
   .navigation {
@@ -117,7 +131,7 @@
   }
 
   .link-text {
-    display: none; /* Hide link text on collapsed sidebar */
+    display: none; 
   }
   
   

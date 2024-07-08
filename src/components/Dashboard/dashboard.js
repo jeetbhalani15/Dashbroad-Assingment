@@ -1,8 +1,11 @@
 import React from 'react'
+import Overview from './overView'
 
 const dashboard = () => {
   return (
-    <div>dashboard</div>
+    <>
+    <Overview/>
+    </>
   )
 }
 

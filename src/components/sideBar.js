@@ -24,7 +24,7 @@ const SideNavigation = () => {
       <div className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
         <div className="logo">
           <MdOutlineIncompleteCircle size={20} color="#5570F1" />
-           <span>Metrix</span>
+           <h3>Metrix</h3>
            </div>
         <div className="nav-items">
         <div>
@@ -71,15 +71,15 @@ const SideNavigation = () => {
         ">
           <ul className="navigation">
             <li>
-              <Link to="/dashboard">
+              <Link to="/support">
                 <PiHeadphonesBold size={18} color="#3f3f3f" />
-                <span className="link-text">Contact Support</span>
+                <span className="below-link-text">Contact Support</span>
               </Link>
             </li>
             <li>
-              <Link to="/dashboard">
+              <Link to="/freegifts">
                 <PiGift size={18} color="#3f3f3f"/>
-                <span className="link-text">Free Gift Awaits You!</span>
+                <span className="below-link-text">Free Gift Awaits You!</span>
               </Link>
             </li>
           </ul>
@@ -90,7 +90,7 @@ const SideNavigation = () => {
         </button>
         <ul className="navigation">
         <li>
-              <Link to="/dashboard">
+              <Link to="/logout">
                 <IoLogOutOutline size={18} color='#CC5F5F'/>
                 <span style={{color:'#CC5F5F'}}>Logout</span>
               </Link>

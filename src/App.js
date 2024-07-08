@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Dashboard from './components/Dashboard/dashboard';
 // import Customers from './components/Customers';
@@ -7,24 +7,28 @@ import Dashboard from './components/Dashboard/dashboard';
 // import Conversion from './components/Conversion';
 // import Settings from './components/Settings';
 import SideNavigation from './components/sideBar';
+import "./App.css";
+import PageHeader from './components/PageHeader/pageHeader';
 
 function App() {
+  const [pageHeader, setPageHeader] = useState("Dashbroad")
   return (
+    <>
     <Router>
-      <div className="App">
-        <SideNavigation />
         <div className="content">
-          <Routes>
-            <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="" component={null} />
-            <Route exact path="" component={null} />
-            <Route exact path="" component={null} />
-            <Route exact path="" component={null} />
-            <Route exact path="" component={null} />
+        <SideNavigation />
+        <PageHeader pageHeader={pageHeader} />
+        <Routes>
+            <Route exact to="dashbroad" path="/dashboard" element={<Dashboard/>} />
+            <Route component={null} />
+            <Route component={null} />
+            <Route component={null} />
+            <Route component={null} />
+            <Route component={null} />
           </Routes>
         </div>
-      </div>
     </Router>
+    </>
   );
 }
 
