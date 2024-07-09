@@ -1,16 +1,21 @@
 .content {
-    margin-left: 250px; /* Initial sidebar width */
+    margin-left: 250px; 
     padding: 20px;
-    transition: margin-left 0.3s ease; /* Smooth transition for content shift */
+    transition: margin-left 0.3s ease; 
+  }
+  .wide{
+    margin-left: 80px; 
+    padding: 20px;
+    transition: margin-left 0.5s ease-in-out;  
   }
   
   /* Media queries for responsive design */
   @media screen and (max-width: 768px) {
     .sidebar {
-      width: 80px; /* Smaller width for smaller screens */
+      width: 80px; 
     }
   
     .content {
-      margin-left: 80px; /* Shift content to accommodate smaller sidebar */
+      margin-left: 80px; 
     }
   }

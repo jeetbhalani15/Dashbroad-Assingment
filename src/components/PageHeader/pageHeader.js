@@ -10,10 +10,10 @@ const PageHeader = ({pageHeader}) => {
     const location = useLocation();
     const getPageName = () => {
         switch (location.pathname) {
-          case '/dashboard':
+          case '/':
             return 'Dashbroad';
           case '/orders':
-            return 'Ordes';
+            return 'Orders';
           case '/customers':
             return 'Customers';
           case '/inventory':
@@ -26,6 +26,8 @@ const PageHeader = ({pageHeader}) => {
             return 'Contact Support';
           case '/freegifts':
             return 'Free Gift Awaits You!';
+          case '/logout':
+            return 'Logout';
           default:
             return '404 Not Found';
         }
@@ -33,7 +35,7 @@ const PageHeader = ({pageHeader}) => {
   return (
     <>
     <div className='header-box'>
-    <div><h3>{getPageName()}</h3></div>
+    <div><h1>{getPageName()}</h1></div>
     <div className='header'>
         <div>Nany's Shop</div><RiArrowDropDownLine size={24}/>
         <div><GoBellFill color='#5570F1' size={17}/></div>

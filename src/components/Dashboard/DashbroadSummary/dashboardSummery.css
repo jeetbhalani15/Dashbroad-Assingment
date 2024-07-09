@@ -1,0 +1,7 @@
+.summary-box{
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 15px; 
+    margin: 20px auto;
+
+}

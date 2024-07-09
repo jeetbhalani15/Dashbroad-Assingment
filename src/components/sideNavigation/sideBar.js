@@ -10,10 +10,11 @@ import { PiHeadphonesBold } from "react-icons/pi";
 import { PiGift } from "react-icons/pi";
 import { IoLogOutOutline } from "react-icons/io5";
 import { MdOutlineIncompleteCircle } from "react-icons/md";
+import { IoIosArrowDropleft } from "react-icons/io";
+import { IoIosArrowDropright } from "react-icons/io";
 import "./Sidebar.css";
 
-const SideNavigation = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+const SideNavigation = ({isCollapsed, setIsCollapsed}) => {
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
@@ -29,40 +30,40 @@ const SideNavigation = () => {
         <div className="nav-items">
         <div>
         <ul className="navigation">
-          <li>
-            <Link  to="/dashboard">
+          <li className="active">
+            <Link  to="/">
               <RxDashboard size={16} color="#3f3f3f" />
-              <span className="link-text">Dashboard</span>
+              <span className={`${isCollapsed ? 'hide' : 'link-text'}`}>Dashboard</span>
             </Link>
           </li>
           <li>
             <Link to="/orders">
               <TbShoppingBag size={16} color="#3f3f3f" />
-              <span className="link-text">Orders</span>
+              <span className={`${isCollapsed ? 'hide' : 'link-text'}`}>Orders</span>
             </Link>
           </li>
           <li>
             <Link to="/customers">
               <TbUsers size={16} color="#3f3f3f" />
-              <span className="link-text">Customers</span>
+              <span className={`${isCollapsed ? 'hide' : 'link-text'}`}>Customers</span>
             </Link>
           </li>
           <li>
             <Link to="/inventory">
               <MdOutlineInventory2 size={16} color="#3f3f3f"/>
-              <span className="link-text">Inventory</span>
+              <span className={`${isCollapsed ? 'hide' : 'link-text'}`}>Inventory</span>
             </Link>
           </li>
           <li>
             <Link to="/conversations">
               <IoChatbubbleEllipsesOutline size={16} color="#3f3f3f"/>
-              <span className="link-text">Conversations</span>
+              <span className={`${isCollapsed ? 'hide' : 'link-text'}`}>Conversations</span>
             </Link>
           </li>
           <li>
             <Link to="/settings">
               <IoSettingsOutline size={16} color="#3f3f3f" />
-              <span className="link-text">Settings</span>
+              <span className={`${isCollapsed ? 'hide' : 'link-text'}`}>Settings</span>
             </Link>
           </li>
         </ul>
@@ -73,28 +74,26 @@ const SideNavigation = () => {
             <li>
               <Link to="/support">
                 <PiHeadphonesBold size={18} color="#3f3f3f" />
-                <span className="below-link-text">Contact Support</span>
+                <span className={`${isCollapsed ? 'hide' : 'below-link-text'}`}>Contact Support</span>
               </Link>
             </li>
             <li>
               <Link to="/freegifts">
                 <PiGift size={18} color="#3f3f3f"/>
-                <span className="below-link-text">Free Gift Awaits You!</span>
+                <span className={`${isCollapsed ? 'hide' : 'below-link-text'}`}>Free Gift Awaits You!</span>
               </Link>
             </li>
           </ul>
         </div>
         </div>
-        <button className="collapse-btn" onClick={toggleCollapse}>
-          {isCollapsed ? <>&#9654;</> : <>&#9660;</>}
-        </button>
         <ul className="navigation">
         <li>
               <Link to="/logout">
                 <IoLogOutOutline size={18} color='#CC5F5F'/>
-                <span style={{color:'#CC5F5F'}}>Logout</span>
+                <span className={`${isCollapsed ? 'hide' : 'logout'}`} style={{color:'#CC5F5F'}}>Logout</span>
               </Link>
             </li>
+                <button className="collapse-btn" onClick={()=>toggleCollapse()}>{isCollapsed? <IoIosArrowDropright size={20} color='black'/>: <IoIosArrowDropleft  size={18} color='black'/>}</button>
         </ul>
       </div>
     </>

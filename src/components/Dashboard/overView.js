@@ -16,7 +16,7 @@ const usage = [
     id: 2,
     resource: 'Volume',
     usage: '1.1',
-    maximum: '10 GB',
+    maximum: '10',
     href: '#',
   },
   {
@@ -61,10 +61,10 @@ export default function Overview() {
                 </a>
               </p>
               <p className="mt-3 flex items-end">
-                <span className=" font-light text-tremor-metric text-dark-tremor-content-subtle">
+                <span className=" font-light text-lg  text-dark-tremor-content-subtle">
                   {item.usage}
                 </span>
-                <span className="font-light text-tremor-content-subtle dark:text-dark-tremor-content-subtle">
+                <span className="font-light text-tremor-content-subtle dark:text-dark-tremor-content-subtle text-lg">
                   /{item.maximum}
                 </span>
               </p>
@@ -93,10 +93,10 @@ export default function Overview() {
                 </a>
               </p>
               <p className="mt-3 flex items-end">
-                <span className="text-tremor-metric font-light text-dark-tremor-content-subtle">
+                <span className="text-lg font-light text-dark-tremor-content-subtle">
                   {item.usage}
                 </span>
-                <span className="font-light text-tremor-content-subtle dark:text-dark-tremor-content-subtle">
+                <span className="font-light text-tremor-content-subtle dark:text-dark-tremor-content-subtle text-lg">
                   /{item.maximum}
                 </span>
               </p>
@@ -125,10 +125,10 @@ export default function Overview() {
                 </a>
               </p>
               <p className="mt-3 flex items-end">
-                <span className="text-tremor-metric font-light text-dark-tremor-content-subtle">
+                <span className="text-lg font-light text-dark-tremor-content-subtle">
                   {item.usage}
                 </span>
-                <span className="font-light text-tremor-content-subtle dark:text-dark-tremor-content-subtle">
+                <span className="font-light text-tremor-content-subtle dark:text-dark-tremor-content-subtle text-lg">
                   /{item.maximum}
                 </span>
               </p>
