@@ -7,7 +7,7 @@ This repository contains a dashboard application built using React Js, JavaScrip
 
 ## Demo
 
-If available, provide a link to a live demo of the dashboard application.
+live Demo URL : https://dashbroad-assingment-b8uxtvdwf-jeetbhalani15s-projects.vercel.app
 
 ## Features
 
