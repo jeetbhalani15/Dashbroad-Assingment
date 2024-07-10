@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { GoBellFill } from "react-icons/go";
 import { CgProfile } from "react-icons/cg";
 import { GoHomeFill } from "react-icons/go";
@@ -35,12 +35,15 @@ const PageHeader = ({pageHeader}) => {
   return (
     <>
     <div className='header-box'>
-    <div><h1>{getPageName()}</h1></div>
+    <div><h1>{getPageName()}</h1>
+    <div class='flex gap-1 justify-center items-center cursor-pointer mt-2'>
+      <div><Link to="/"><GoHomeFill color='#5570F1' size={17}/></Link></div>
+      <div class='text-sm font-light'>{`/  ${getPageName()}`}</div>
+      </div></div>
     <div className='header'>
-        <div>Nany's Shop</div><RiArrowDropDownLine size={24}/>
+        <div class='flex items-center gap-1 cursor-pointer'>Nany's Shop<RiArrowDropDownLine size={24}/></div>
         <div><GoBellFill color='#5570F1' size={17}/></div>
         <div><CgProfile color='#5570F1' size={17}/></div>
-        <div><GoHomeFill color='#5570F1' size={17}/></div>
     </div>
     </div>
     </>

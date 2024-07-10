@@ -12,7 +12,7 @@
   /* Media queries for responsive design */
   @media screen and (max-width: 768px) {
     .sidebar {
-      width: 80px; 
+      width: 74px; 
     }
   
     .content {

@@ -128,7 +128,7 @@ import {
               Customer Orders
             </h3>
             <p className="mt-1 text-tremor-default leading-6 text-tremor-content dark:text-dark-tremor-content">
-              Overview of all registered workspaces within your organization.
+              Overview of all Customer orders within your store.
             </p>
           </div>
           <button
