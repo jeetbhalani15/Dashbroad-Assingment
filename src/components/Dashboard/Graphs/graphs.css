@@ -1,6 +1,7 @@
 .piachart-container{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-around;
     padding: .5rem;
+    flex-wrap: wrap;
 }
