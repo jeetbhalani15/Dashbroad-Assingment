@@ -11,9 +11,10 @@ If available, provide a link to a live demo of the dashboard application.
 
 ## Features
 
-- [Feature 1]
-- [Feature 2]
-- [Feature 3]
+- SPA Application.
+- Data Visualization with bar and charts with help of Tremor libary. 
+- Sliding Side Nav Bar.
+- Responsive Layout.
 
 
 
