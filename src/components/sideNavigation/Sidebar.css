@@ -4,7 +4,6 @@
   width: 260px;
   height: 1024px;
   gap: 0px;
-  opacity: 0px;
   background-color: white;
   color: white;
   padding: 18px;
@@ -42,8 +41,22 @@
   padding: 0;
   margin-top: 20px;
 }
- li a span:hover{
+ li:hover{
   color: aliceblue;
+ }
+/* .nav-item:hover{
+  background-color:#5570F1;
+  border-radius: 6px;
+  color: white;
+ } */
+ nav ul li:hover{
+  background-color:#5570F1;
+ }
+ nav ul li:hover span{
+  color: aliceblue;
+ }
+ nav ul li:hover .icon{
+  color: white;
  }
 .navigation li {
   margin-bottom: 10px;
@@ -60,9 +73,9 @@
   transition: background-color 0.3s ease;
 }
 
-.navigation li:hover {
+/* .navigation li:hover {
   background-color:#5570F1;
-}
+} */
 li{
   border-radius: 6px;
 }

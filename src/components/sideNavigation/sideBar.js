@@ -8,7 +8,7 @@ import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import { IoSettingsOutline } from "react-icons/io5";
 import { PiHeadphonesBold } from "react-icons/pi";
 import { PiGift } from "react-icons/pi";
-import { IoLogOutOutline } from "react-icons/io5";
+import { IoLogOut } from "react-icons/io5";
 import { MdOutlineIncompleteCircle } from "react-icons/md";
 import { IoIosArrowDropleft } from "react-icons/io";
 import { IoIosArrowDropright } from "react-icons/io";
@@ -22,7 +22,7 @@ const SideNavigation = ({isCollapsed, setIsCollapsed}) => {
 
   return (
     <>
-      <div className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
+      <nav className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
         <div className="logo">
           <MdOutlineIncompleteCircle size={20} color="#5570F1" />
            <h3>Metrix</h3>
@@ -32,37 +32,37 @@ const SideNavigation = ({isCollapsed, setIsCollapsed}) => {
         <ul className="navigation">
           <li className="active">
             <Link  to="/">
-              <RxDashboard size={16} color="#3f3f3f" />
+              <RxDashboard className="icon" size={16} />
               <span className={`${isCollapsed ? 'hide' : 'link-text'}`}>Dashboard</span>
             </Link>
           </li>
           <li>
             <Link to="/orders">
-              <TbShoppingBag size={16} color="#3f3f3f" />
+              <TbShoppingBag className="icon" size={16} />
               <span className={`${isCollapsed ? 'hide' : 'link-text'}`}>Orders</span>
             </Link>
           </li>
           <li>
             <Link to="/customers">
-              <TbUsers size={16} color="#3f3f3f" />
+              <TbUsers size={16} className="icon"/>
               <span className={`${isCollapsed ? 'hide' : 'link-text'}`}>Customers</span>
             </Link>
           </li>
           <li>
             <Link to="/inventory">
-              <MdOutlineInventory2 size={16} color="#3f3f3f"/>
+              <MdOutlineInventory2 size={16} className="icon"/>
               <span className={`${isCollapsed ? 'hide' : 'link-text'}`}>Inventory</span>
             </Link>
           </li>
           <li>
             <Link to="/conversations">
-              <IoChatbubbleEllipsesOutline size={16} color="#3f3f3f"/>
+              <IoChatbubbleEllipsesOutline className="icon" size={16}/>
               <span className={`${isCollapsed ? 'hide' : 'link-text'}`}>Conversations</span>
             </Link>
           </li>
           <li>
             <Link to="/settings">
-              <IoSettingsOutline size={16} color="#3f3f3f" />
+              <IoSettingsOutline size={16} className="icon" />
               <span className={`${isCollapsed ? 'hide' : 'link-text'}`}>Settings</span>
             </Link>
           </li>
@@ -73,13 +73,13 @@ const SideNavigation = ({isCollapsed, setIsCollapsed}) => {
           <ul className="navigation">
             <li>
               <Link to="/support">
-                <PiHeadphonesBold size={18} color="#3f3f3f" />
+                <PiHeadphonesBold size={18} className="icon" />
                 <span className={`${isCollapsed ? 'hide' : 'below-link-text'}`}>Contact Support</span>
               </Link>
             </li>
             <li>
               <Link to="/freegifts">
-                <PiGift size={18} color="#3f3f3f"/>
+                <PiGift size={18} className="icon"/>
                 <span className={`${isCollapsed ? 'hide' : 'below-link-text'}`}>Free Gift Awaits You!</span>
               </Link>
             </li>
@@ -89,13 +89,13 @@ const SideNavigation = ({isCollapsed, setIsCollapsed}) => {
         <ul className="navigation">
         <li>
               <Link to="/logout">
-                <IoLogOutOutline size={18} color='#CC5F5F'/>
-                <span className={`${isCollapsed ? 'hide' : 'logout'}`} style={{color:'#CC5F5F'}}>Logout</span>
+                <IoLogOut size={18} className="icon" color="rgb(251 129 93)"/>
+                <span   className={`${isCollapsed ? 'hide' : 'logout'}`} style={{color:'rgb(251 129 93)', marginLeft:'0.5rem'}}>Logout</span>
               </Link>
             </li>
                 <button className="collapse-btn" onClick={()=>toggleCollapse()}>{isCollapsed? <IoIosArrowDropright size={20} color='black'/>: <IoIosArrowDropleft  size={18} color='black'/>}</button>
         </ul>
-      </div>
+      </nav>
     </>
   );
 };
