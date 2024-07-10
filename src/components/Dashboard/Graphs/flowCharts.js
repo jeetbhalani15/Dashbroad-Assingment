@@ -1,79 +1,78 @@
-// 'use client';
-import { Card, LineChart, List, ListItem } from '@tremor/react';
+import { Card, LineChart, List, ListItem } from "@tremor/react";
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 const data = [
   {
-    date: 'Jan 23',
+    date: "Jan 23",
     Organic: 232,
     Sponsored: 0,
     Affiliate: 49,
   },
   {
-    date: 'Feb 23',
+    date: "Feb 23",
     Organic: 241,
     Sponsored: 0,
     Affiliate: 61,
   },
   {
-    date: 'Mar 23',
+    date: "Mar 23",
     Organic: 291,
     Sponsored: 0,
     Affiliate: 55,
   },
   {
-    date: 'Apr 23',
+    date: "Apr 23",
     Organic: 101,
     Sponsored: 0,
     Affiliate: 21,
   },
   {
-    date: 'May 23',
+    date: "May 23",
     Organic: 318,
     Sponsored: 0,
     Affiliate: 66,
   },
   {
-    date: 'Jun 23',
+    date: "Jun 23",
     Organic: 205,
     Sponsored: 0,
     Affiliate: 69,
   },
   {
-    date: 'Jul 23',
+    date: "Jul 23",
     Organic: 372,
     Sponsored: 0,
     Affiliate: 55,
   },
   {
-    date: 'Aug 23',
+    date: "Aug 23",
     Organic: 341,
     Sponsored: 0,
     Affiliate: 74,
   },
   {
-    date: 'Sep 23',
+    date: "Sep 23",
     Organic: 387,
     Sponsored: 120,
     Affiliate: 190,
   },
   {
-    date: 'Oct 23',
+    date: "Oct 23",
     Organic: 220,
     Sponsored: 0,
     Affiliate: 89,
   },
   {
-    date: 'Nov 23',
+    date: "Nov 23",
     Organic: 372,
     Sponsored: 0,
     Affiliate: 44,
   },
   {
-    date: 'Dec 23',
+    date: "Dec 23",
     Organic: 321,
     Sponsored: 0,
     Affiliate: 93,
@@ -82,26 +81,26 @@ const data = [
 
 const summary = [
   {
-    name: 'Organic',
+    name: "Organic",
     value: 3273,
   },
   {
-    name: 'Sponsored',
+    name: "Sponsored",
     value: 120,
   },
   {
-    name: 'Affiliate',
+    name: "Affiliate",
     value: 866,
   },
 ];
 
 const valueFormatter = (number) =>
-  `${Intl.NumberFormat('us').format(number).toString()}`;
+  `${Intl.NumberFormat("us").format(number).toString()}`;
 
 const statusColor = {
-  Organic: 'bg-blue-500',
-  Sponsored: 'bg-violet-500',
-  Affiliate: 'bg-fuchsia-500',
+  Organic: "bg-blue-500",
+  Sponsored: "bg-violet-500",
+  Affiliate: "bg-fuchsia-500",
 };
 
 export default function Flowchart() {
@@ -114,8 +113,8 @@ export default function Flowchart() {
         <LineChart
           data={data}
           index="date"
-          categories={['Organic', 'Sponsored', 'Affiliate']}
-          colors={['blue', 'violet', 'fuchsia']}
+          categories={["Organic", "Sponsored", "Affiliate"]}
+          colors={["blue", "violet", "fuchsia"]}
           valueFormatter={valueFormatter}
           showLegend={false}
           showYAxis={false}
@@ -127,7 +126,7 @@ export default function Flowchart() {
             <ListItem key={item.name}>
               <div className="flex items-center space-x-2">
                 <span
-                  className={classNames(statusColor[item.name], 'h-0.5 w-3')}
+                  className={classNames(statusColor[item.name], "h-0.5 w-3")}
                   aria-hidden={true}
                 />
                 <span>{item.name}</span>

@@ -1,11 +1,11 @@
-.overview-box{
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    margin-top: 1rem;
+.overview-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 @media screen and (max-width: 768px) {
-    .recent-order-box{
-        display: none;
-    }
+  .recent-order-box {
+    display: none;
+  }
 }

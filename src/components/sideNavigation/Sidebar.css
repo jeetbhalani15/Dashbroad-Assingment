@@ -1,5 +1,3 @@
-/* Sidebar.css */
-
 .sidebar {
   width: 260px;
   height: 1024px;
@@ -14,15 +12,15 @@
   transition: transform 0.3s ease;
   border: 1px solid rgb(225, 225, 225);
 }
-.collapsed{
+.collapsed {
   width: 76px;
   background-color: aliceblue;
 }
-.hide{
+.hide {
   display: none;
 }
 
-.logo{
+.logo {
   color: #3f3f3f;
   display: flex;
   align-items: center;
@@ -31,7 +29,7 @@
 }
 .logo img {
   width: 100%;
-  max-width: 150px; 
+  max-width: 150px;
   display: block;
   margin: 0 auto;
 }
@@ -41,23 +39,18 @@
   padding: 0;
   margin-top: 20px;
 }
- li:hover{
+li:hover {
   color: aliceblue;
- }
-/* .nav-item:hover{
-  background-color:#5570F1;
-  border-radius: 6px;
-  color: white;
- } */
- nav ul li:hover{
-  background-color:#5570F1;
- }
- nav ul li:hover span{
+}
+nav ul li:hover {
+  background-color: #5570f1;
+}
+nav ul li:hover span {
   color: aliceblue;
- }
- nav ul li:hover .icon{
+}
+nav ul li:hover .icon {
   color: white;
- }
+}
 .navigation li {
   margin-bottom: 10px;
   display: flex;
@@ -73,10 +66,7 @@
   transition: background-color 0.3s ease;
 }
 
-/* .navigation li:hover {
-  background-color:#5570F1;
-} */
-li{
+li {
   border-radius: 6px;
 }
 
@@ -90,7 +80,7 @@ li{
   color: #050505;
   margin-right: 2px;
   padding: 3px 12px;
-} 
+}
 .link-text {
   margin-left: 10px;
   font: Inter;
@@ -102,31 +92,31 @@ li{
   margin-right: 2px;
   padding: 3px 12px;
 }
-.icon{
+.icon {
   color: #3f3f3f;
 }
 
-.nav-items{
+.nav-items {
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
-.logout{
-  color: #CC5F5F
+.logout {
+  color: #cc5f5f;
 }
 .navigation a {
   padding: 16px, 20px, 16px, 20px;
 }
-.collapse-btn{
+.collapse-btn {
   margin-left: 8px;
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
-  .sidebar{
+  .sidebar {
     width: 76px;
   }
-  
+
   .navigation {
     flex-direction: column;
   }
@@ -140,16 +130,15 @@ li{
   }
 
   .link-text {
-    display: none; 
+    display: none;
   }
   .below-link-text {
-    display: none; 
-  }
-  .logout{
     display: none;
   }
-  .collapse-btn{
+  .logout {
     display: none;
   }
-  
+  .collapse-btn {
+    display: none;
+  }
 }

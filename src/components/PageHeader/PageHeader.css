@@ -1,13 +1,13 @@
-.header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2rem;
-    cursor: pointer;
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
 }
 
-.header-box{
-    display: flex;
-    justify-content: space-between;
-    padding: 3px;
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
 }

@@ -1,12 +1,10 @@
-'use client';
-
-import { FunnelChart } from '@tremor/react';
+import { FunnelChart } from "@tremor/react";
 
 const chartdata = [
-  { name: '1. Add credit Card', value: 89 },
-  { name: '2. Copy invite code', value: 6 },
+  { name: "1. Add credit Card", value: 89 },
+  { name: "2. Copy invite code", value: 6 },
   {
-    name: '3. Send invite code',
+    name: "3. Send invite code",
     value: 5,
   },
 ];
@@ -14,7 +12,7 @@ const chartdata = [
 export function SummaryChart() {
   return (
     <>
-    <h3>Summary</h3>
+      <h3>Summary</h3>
       <h3 className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
         Overall conversion
       </h3>

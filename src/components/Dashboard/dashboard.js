@@ -1,14 +1,14 @@
-import React from 'react'
-import Overview from './overView'
-import DashboardSummary from './DashbroadSummary/dashboardSummary'
+import React from "react";
+import Overview from "./overView";
+import DashboardSummary from "./DashbroadSummary/dashboardSummary";
 
 const dashboard = () => {
   return (
     <>
-    <Overview/>
-    <DashboardSummary/>
+      <Overview />
+      <DashboardSummary />
     </>
-  )
-}
+  );
+};
 
-export default dashboard
+export default dashboard;
