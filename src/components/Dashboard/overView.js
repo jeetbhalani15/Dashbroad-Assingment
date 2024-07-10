@@ -53,12 +53,16 @@ export default function Overview() {
               justifyContent: "space-between",
               marginTop: "8px",
             }}
-          >
-            <h3>
+          > 
+          <div>
+            <h2>
               <IoPieChartSharp color="#5570F1" size={26} />
-            </h3>
-            <div>This Week</div>
+            </h2>
+            </div>
+            <div class="flex items-center justify-center gap-1">
+            <div class="font-light text-sm">This Week</div>
             <RiArrowDropDownLine size={24} />
+            </div>
           </div>
           <div className="mt-4 grid grid-cols-1 gap-2 sm:max-w-4xl sm:grid-cols-4">
             {usage.map((item) => (
@@ -69,16 +73,15 @@ export default function Overview() {
               >
                 <p className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
                   <a href={item.href} className="focus:outline-none">
-                    {/* extend link to entire card */}
                     <span className="absolute inset-0" aria-hidden={true} />
                     {item.resource}
                   </a>
                 </p>
                 <p className="mt-3 flex items-end">
-                  <span className=" font-light text-lg  text-dark-tremor-content-subtle">
+                  <span className=" font-light text-lg  text-tremor-content">
                     {item.usage}
                   </span>
-                  <span className="font-light text-tremor-content-subtle dark:text-dark-tremor-content-subtle text-lg">
+                  <span className="font-light text-tremor-content dark:text-dark-tremor-content-subtle text-lg">
                     /{item.maximum}
                   </span>
                 </p>
@@ -101,11 +104,15 @@ export default function Overview() {
               marginTop: "8px",
             }}
           >
+            <div>
             <h3>
-              <TbUsers size={26} color="#5570F1" />
+              <TbUsers color="#5570F1" size={26} />
             </h3>
-            <div>This Week</div>
+            </div>
+            <div class="flex items-center justify-center gap-1">
+            <div class="font-light text-sm">This Week</div>
             <RiArrowDropDownLine size={24} />
+            </div>
           </div>
           <div className="mt-4 grid grid-cols-1 gap-2 sm:max-w-3xl sm:grid-cols-4">
             {usage.map((item) => (
@@ -116,16 +123,15 @@ export default function Overview() {
               >
                 <p className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
                   <a href={item.href} className="focus:outline-none">
-                    {/* extend link to entire card */}
                     <span className="absolute inset-0" aria-hidden={true} />
                     {item.resource}
                   </a>
                 </p>
                 <p className="mt-3 flex items-end">
-                  <span className="text-lg font-light text-dark-tremor-content-subtle">
+                  <span className="text-lg font-light text-tremor-content">
                     {item.usage}
                   </span>
-                  <span className="font-light text-tremor-content-subtle dark:text-dark-tremor-content-subtle text-lg">
+                  <span className="font-light text-tremor-content dark:text-dark-tremor-content-subtle text-lg">
                     /{item.maximum}
                   </span>
                 </p>
@@ -148,13 +154,17 @@ export default function Overview() {
               marginTop: "8px",
             }}
           >
+             <div>
             <h3>
               <TbShoppingBag color="#5570F1" size={26} />
             </h3>
-            <div>This Week</div>
+            </div>
+            <div class="flex items-center justify-center gap-1">
+            <div class="font-light text-sm">This Week</div>
             <RiArrowDropDownLine size={24} />
+            </div>
           </div>
-          <div className="mt-4 grid grid-cols-1 gap-4 sm:max-w-4xl sm:grid-cols-4">
+          <div className="mt-4 grid grid-cols-1 gap-2 sm:max-w-4xl sm:grid-cols-4">
             {usage.map((item) => (
               <Card
                 style={{ background: "white", borderColor: "rgb(211 213 216)" }}
@@ -163,16 +173,15 @@ export default function Overview() {
               >
                 <p className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
                   <a href={item.href} className="focus:outline-none">
-                    {/* extend link to entire card */}
                     <span className="absolute inset-0" aria-hidden={true} />
                     {item.resource}
                   </a>
                 </p>
                 <p className="mt-3 flex items-end">
-                  <span className="text-lg font-light text-dark-tremor-content-subtle">
+                  <span className="text-lg font-light text-tremor-content">
                     {item.usage}
                   </span>
-                  <span className="font-light text-tremor-content-subtle dark:text-dark-tremor-content-subtle text-lg">
+                  <span className="font-light text-tremor-content  text-lg">
                     /{item.maximum}
                   </span>
                 </p>
